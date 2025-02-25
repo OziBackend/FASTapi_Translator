@@ -26,6 +26,10 @@ class Translator:
 
 translator = Translator()
 
+@app.on_event("startup")
+def load_default_model():
+    translator.load_model("en", "fr")  # Preload a default model at startup
+
 class TranslationRequest(BaseModel):
     text: str
     source_lang: str
