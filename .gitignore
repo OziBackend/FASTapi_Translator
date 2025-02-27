@@ -1,1 +1,3 @@
 venv_translator_app
+__pycache__
+models/*
