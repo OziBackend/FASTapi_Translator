@@ -42,7 +42,26 @@ translator = Translator()
 
 @app.on_event("startup")
 def load_default_model():
-    translator.load_model("en", "fr")  # Preload a default model at startup
+    translator.load_model("en", "ar")  # english to Arabic
+    translator.load_model("en", "fr")  # english to French
+    translator.load_model("en", "hi")  # english to Hindi
+    translator.load_model("en", "zh")  # english to Chinese
+    translator.load_model("en", "nl")  # english to Dutch
+    translator.load_model("en", "fi")  # english to Finnish
+    translator.load_model("en", "de")  # english to German
+    translator.load_model("en", "it")  # english to Italian
+    translator.load_model("en", "jap")  # english to Japanese
+    translator.load_model("en", "ru")  # english to Russian
+    translator.load_model("en", "es")  # english to Spanish
+    translator.load_model("en", "ur")  # english to Urdu
+    
+    ### Not Available ###
+    # translator.load_model("en", "ko")  # english to Korean
+    # translator.load_model("en", "la")  # english to Latin
+    # translator.load_model("en", "pl")  # english to Polish
+    # translator.load_model("en", "pt")  # english to Portuguese
+    # translator.load_model("en", "pa")  # english to Punjabi
+    # translator.load_model("en", "tr")  # english to Turkish
 
 class TranslationRequest(BaseModel):
     text: str
